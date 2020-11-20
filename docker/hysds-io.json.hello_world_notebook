@@ -6,7 +6,7 @@
       "from": "submitter",
       "type": "number",
       "description": "random note",
-      "default": 1337
+      "default": "1337"
     },
     {
       "name": "b",
@@ -18,38 +18,30 @@
       "name": "c",
       "from": "submitter",
       "type": "number",
-      "default": 111.222
+      "default": "111.222"
     },
     {
       "name": "d",
       "from": "submitter",
       "type": "text",
-      "default": [
-        "a",
-        "b",
-        "c"
-      ]
+      "default": "[\"a\", \"b\", \"c\"]"
     },
     {
       "name": "e",
       "from": "submitter",
       "type": "text",
-      "default": {
-        "x": 1,
-        "y": 2,
-        "z": 3
-      }
+      "default": "{\"x\": 1, \"y\": 2, \"z\": 3}"
     },
     {
       "name": "f",
       "from": "submitter",
       "type": "enum",
+      "description": "testing enum stuff",
       "enumerables": [
         "yes",
         "no",
         "maybe so"
       ],
-      "description": "testing enum stuff",
       "default": "yes"
     }
   ],
