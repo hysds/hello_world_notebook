@@ -26,6 +26,7 @@ RUN curl -sSL https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64
 	&& rm -rf /tmp/miniconda.sh \
 	&& conda install -y python=3 \
 	&& conda install -y nb_conda_kernels \
+	&& conda install -y pip \
 	&& conda update conda
 
 RUN mkdir -p /data/work \
@@ -38,10 +39,7 @@ RUN cd $HOME \
     && cd notebook_pge_wrapper \
     && sudo $CONDA_DIR/bin/pip install -e .
 
-# copy your repo into the docker container
-################################################
-# COPY . /home/ops/<repo name>
-################################################
+COPY . /home/ops/hello_world_notebook
 
 WORKDIR $HOME
 
