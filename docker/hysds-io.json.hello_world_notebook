@@ -1,0 +1,58 @@
+{
+  "submission_type": "iteration",
+  "params": [
+    {
+      "name": "a",
+      "from": "submitter",
+      "type": "number",
+      "description": "random note",
+      "default": 1337
+    },
+    {
+      "name": "b",
+      "from": "submitter",
+      "type": "text",
+      "default": "hello world!"
+    },
+    {
+      "name": "c",
+      "from": "submitter",
+      "type": "number",
+      "default": 111.222
+    },
+    {
+      "name": "d",
+      "from": "submitter",
+      "type": "text",
+      "default": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    {
+      "name": "e",
+      "from": "submitter",
+      "type": "text",
+      "default": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+      }
+    },
+    {
+      "name": "f",
+      "from": "submitter",
+      "type": "enum",
+      "enumerables": "yes",
+      "description": "testing enum stuff",
+      "default": [
+        "yes",
+        "no",
+        "maybe so"
+      ]
+    }
+  ],
+  "component": "tosca",
+  "label": "Hello world notebook PGE"
+}

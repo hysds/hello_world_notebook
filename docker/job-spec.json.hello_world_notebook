@@ -1,0 +1,38 @@
+{
+  "command": "notebook-pge-wrapper execute $HOME/hello_world_notebook/notebook_pges/hello_world_notebook.ipynb",
+  "time_limit": 3600,
+  "soft_time_limit": 3600,
+  "disk_usage": "1GB",
+  "required_queues": [
+    "factotum-job_worker-small"
+  ],
+  "imported_worker_files": {
+    "$HOME/.aws": "/home/ops/.aws"
+  },
+  "params": [
+    {
+      "name": "a",
+      "destination": "context"
+    },
+    {
+      "name": "b",
+      "destination": "context"
+    },
+    {
+      "name": "c",
+      "destination": "context"
+    },
+    {
+      "name": "d",
+      "destination": "context"
+    },
+    {
+      "name": "e",
+      "destination": "context"
+    },
+    {
+      "name": "f",
+      "destination": "context"
+    }
+  ]
+}
