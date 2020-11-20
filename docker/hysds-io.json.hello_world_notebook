@@ -44,13 +44,13 @@
       "name": "f",
       "from": "submitter",
       "type": "enum",
-      "enumerables": "yes",
-      "description": "testing enum stuff",
-      "default": [
+      "enumerables": [
         "yes",
         "no",
         "maybe so"
-      ]
+      ],
+      "description": "testing enum stuff",
+      "default": "yes"
     }
   ],
   "component": "tosca",
