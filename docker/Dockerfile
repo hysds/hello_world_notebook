@@ -2,6 +2,8 @@ FROM hysds/pge-base:latest
 
 ENV HOME=/home/ops
 
+RUN conda install -y nb_conda_kernels
+
 USER ops
 
 RUN cd $HOME \
