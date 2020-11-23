@@ -1,8 +1,9 @@
 FROM hysds/pge-base:latest
 
-ENV HOME=/home/ops
+ENV HOME=/home/ops \
+    CONDA_DIR=/opt/conda
 
-RUN conda install -y nb_conda_kernels
+RUN $CONDA_DIR/bin/conda install -y nb_conda_kernels
 
 USER ops
 
