@@ -7,7 +7,7 @@ USER ops
 RUN cd $HOME \
     && git clone https://github.com/hysds/notebook_pge_wrapper.git \
     && cd notebook_pge_wrapper \
-    && pip install -e .
+    && $HOME/verdi/bin/pip install -e .
 
 # copy your repo into the docker container
 ################################################
