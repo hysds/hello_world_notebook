@@ -12,7 +12,7 @@
       "name": "b",
       "from": "submitter",
       "type": "text",
-      "default": "hello world!"
+      "default": "happy holidays!"
     },
     {
       "name": "c",
