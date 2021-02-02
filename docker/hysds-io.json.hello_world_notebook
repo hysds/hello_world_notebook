@@ -51,6 +51,11 @@
         "maybe so"
       ],
       "default": "yes"
+    },
+    {
+      "name": "g",
+      "from": "submitter",
+      "type": "boolean"
     }
   ],
   "component": "tosca",
