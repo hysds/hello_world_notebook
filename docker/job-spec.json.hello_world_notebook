@@ -33,6 +33,10 @@
     {
       "name": "f",
       "destination": "context"
+    },
+    {
+      "name": "g",
+      "destination": "context"
     }
   ]
 }
