@@ -56,7 +56,13 @@
       "name": "g",
       "from": "submitter",
       "type": "boolean"
-    }
+    },
+    {
+      "name": "h",
+      "from": "submitter",
+      "type": "number",
+      "optional": true
+    },
   ],
   "component": "tosca",
   "label": "Hello world notebook PGE"
