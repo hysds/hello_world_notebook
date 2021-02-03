@@ -41,6 +41,6 @@
     {
       "name": "h",
       "destination": "context"
-    },
+    }
   ]
 }

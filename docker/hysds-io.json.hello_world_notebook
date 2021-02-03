@@ -62,7 +62,7 @@
       "from": "submitter",
       "type": "number",
       "optional": true
-    },
+    }
   ],
   "component": "tosca",
   "label": "Hello world notebook PGE"
