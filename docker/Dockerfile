@@ -21,7 +21,7 @@ COPY . $HOME/hello_world_notebook
 ################################################
 
 # installing user defined dependencies
-RUN $HOME/verdi/bin/papermill $HOME/hello_world_notebook/docker/requirements.ipynb $HOME/hello_world_notebook/docker/requirements_output.ipynb --log-output
+RUN $HOME/verdi/bin/papermill $HOME/hello_world_notebook/docker/requirements.ipynb /tmp/requirements_output.ipynb --log-output
 
 WORKDIR $HOME
 
