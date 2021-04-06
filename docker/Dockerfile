@@ -20,6 +20,10 @@ RUN cd $HOME \
 COPY . $HOME/hello_world_notebook
 ################################################
 
+# installing user defined dependencies
+RUN papermill $HOME/hello_world/docker/requirements.ipynb $HOME/hello_world/docker/requirements_output.ipynb
+
+
 WORKDIR $HOME
 
 CMD ["/bin/bash", "--login"]
