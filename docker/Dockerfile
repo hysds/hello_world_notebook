@@ -5,26 +5,23 @@ ENV HOME=/home/jovyan \
 
 USER root
 RUN $CONDA_DIR/bin/conda install -y nb_conda_kernels
+RUN $CONDA_DIR/bin/pip install 'ipykernel<5.0.0'
 
 USER jovyan
 
-RUN $HOME/verdi/bin/pip install 'ipykernel<5.0.0'
-
-RUN cd $HOME \
-    && git clone https://github.com/hysds/notebook_pge_wrapper.git \
-    && cd notebook_pge_wrapper \
-    && $HOME/verdi/bin/pip install -e .
+# ONLY TOUCH IF YOU NEED MORE RECENT VERSION, OTHERWISE DON'T TOUCH!!
+#RUN cd $HOME \
+#    && git clone https://github.com/hysds/notebook_pge_wrapper.git \
+#    && cd notebook_pge_wrapper \
+#    && $CONDA_DIR/bin/pip install -e .
 
 # copy your repo into the docker container
 ################################################
 COPY . $HOME/hello_world_notebook
 ################################################
 
-# testing
-RUN conda install -c conda-forge nodejs -y
-
 # installing user defined dependencies
-RUN $HOME/verdi/bin/papermill $HOME/hello_world_notebook/docker/requirements.ipynb /tmp/requirements_output.ipynb --log-output
+RUN $CONDA_DIR/bin/papermill $HOME/hello_world_notebook/docker/requirements.ipynb /tmp/requirements_output.ipynb --log-output
 
 WORKDIR $HOME
 
