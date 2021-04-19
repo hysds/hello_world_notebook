@@ -1,12 +1,12 @@
-FROM hysds/pge-base:latest
+FROM cae-artifactory.jpl.nasa.gov:16001/gov/nasa/jpl/nisar/sds/pcm/nisar_ade:latest
 
-ENV HOME=/home/ops \
+ENV HOME=/home/jovyan \
     CONDA_DIR=/opt/conda
 
 USER root
 RUN $CONDA_DIR/bin/conda install -y nb_conda_kernels
 
-USER ops
+USER jovyan
 
 RUN $HOME/verdi/bin/pip install 'ipykernel<5.0.0'
 
@@ -24,7 +24,7 @@ COPY . $HOME/hello_world_notebook
 RUN conda install -c conda-forge nodejs -y
 
 # installing user defined dependencies
-# RUN $HOME/verdi/bin/papermill $HOME/hello_world_notebook/docker/requirements.ipynb /tmp/requirements_output.ipynb --log-output
+ RUN $HOME/verdi/bin/papermill $HOME/hello_world_notebook/docker/requirements.ipynb /tmp/requirements_output.ipynb --log-output
 
 WORKDIR $HOME
 
